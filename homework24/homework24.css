@@ -20,6 +20,8 @@ title_b {
 }
 
 img {
+    width: 300px;
+    height: 400px;
     float: left;
 }
 
