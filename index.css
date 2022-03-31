@@ -3,9 +3,13 @@ html, body {
     height: 100%;
 }
 
+html {
+    background-image: url(/image_source/wallpaper.jpg);
+    background-size: cover;
+}
+
 body {
     padding: 0px;
     margin: 0px;
-    background-color: #E2E2E2;
     overflow: hidden;
 }

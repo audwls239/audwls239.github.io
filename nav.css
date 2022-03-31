@@ -1,8 +1,10 @@
-nav {
+#nav {
     width: 280px;
     height: 100%;
+    background-color: white;
     border-right: 1px solid #A2A2A2;
     float: left;
+    opacity: 0.8;
 }
 
 /* ============================== */
@@ -13,23 +15,21 @@ nav {
 }
 
 #profile_zone img {
-    border: 1px solid black;
+    border: 1px solid #A2A2A2;
     border-radius: 100%;
-    width: 75px;
-    height: 75px;
-    margin-right: 15px;
-    float: left;
+    width: 150px;
+    height: 150px;
+    opacity: 1;
 }
 
-#profile_zone p {
-    margin: 0px;
+#profile_zone #name {
+    margin-top: 10px;
     font-size: 25px;
     font-weight: 600;
 }
 
 #profile_zone div {
-    margin-top: 20px;
-    clear: both;
+    margin-top: 10px;
 }
 
 /* ============================== */
@@ -50,14 +50,14 @@ li a.index{
     font-weight: 700;
     text-align: center;
     background-color: #4caf50;
-    color: white;
+    color: black;
 }
 
 li a:link, li a:visited {
     font-size: 15px;
     font-weight: 700;
     text-decoration: none;
-    color: gray;
+    color: black;
 }
 
 li a:hover:not(.index) {
