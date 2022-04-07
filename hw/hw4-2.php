@@ -57,7 +57,7 @@ for($i = 0; $i < $n_value; $i++) {
 }
 
 echo "<br><br>";
-echo "정렬전";
+echo "정렬전 <br>";
 for($i = 0; $i < $n_value; $i++) {
   echo "index " . ($i + 1) . ": " . $dada[$i] . " <br>";
 }
@@ -65,7 +65,7 @@ for($i = 0; $i < $n_value; $i++) {
 sort($dada);
 
 echo "<br><br>";
-echo "정렬후";
+echo "정렬후 <br>";
 for($i = 0; $i < $n_value; $i++) {
   echo "index " . ($i + 1) . ": " . $dada[$i] . " <br>";
 }
