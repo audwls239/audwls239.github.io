@@ -56,13 +56,16 @@ for($i = 0; $i < $n_value; $i++) {
   $dada[$i] = rand();
 }
 
-echo "정렬 전 결과값";
+echo "<br><br>";
+echo "정렬전";
 for($i = 0; $i < $n_value; $i++) {
   echo "index " . ($i + 1) . ": " . $dada[$i] . " <br>";
 }
 
 sort($dada);
 
+echo "<br><br>";
+echo "정렬후";
 for($i = 0; $i < $n_value; $i++) {
   echo "index " . ($i + 1) . ": " . $dada[$i] . " <br>";
 }
