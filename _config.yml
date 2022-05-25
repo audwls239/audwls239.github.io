@@ -102,9 +102,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "김명진"
+  name             : "김명진 <br>20191449"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "(자칭) 동서대에서 제일 미친놈"
+  bio              : "(자칭) 동서대 인기남"
   location         : "동서대 U-IT 6층"
   email            :
   links:
