@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "동서대 미친놈"
+title                    : "개발자 지망생 블로그"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Your Name"
@@ -104,8 +104,8 @@ analytics:
 author:
   name             : "김명진"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "동서대 제일 가는 미친놈"
-  location         : "경상남도 김해시 삼계로 232 <br>(현대 분성마을 아이파크 1차 아파트) 105동 1205호"
+  bio              : "(자칭) 동서대에서 제일 미친놈"
+  location         : "동서대 U-IT 6층"
   email            :
   links:
     - label: "Email"
