@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Cake Form</title>
+    <script type="text/javascript" src="js/formcalculations.js"></script>
+    <link href="styles/cakeform.css" rel="stylesheet" type="text/css" />
+</head>
+
+<script>
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+</script>
+
+<body onload='hideTotal(), startTime()'>
+    <div id="txt"></div>
+    
+    <div id="wrap">
+        <form action="" id="cakeform" onsubmit="return false;">
+            <div>
+                <div class="cont_order">
+                    <fieldset>
+                        <legend>당신만의 케이크를 만들어보세요!</legend>
+                        <label>케이크 사이즈</label>
+                        <label class='radiolabel'><input type="radio" name="selectedcake" value="Round6"
+                                onclick="calculateTotal()" />원형 케이크 6인치 - 8인 분 ($20)</label><br />
+                        <label class='radiolabel'><input type="radio" name="selectedcake" value="Round8"
+                                onclick="calculateTotal()" />원형 케이크 8인치 - 12인 분 ($25)</label><br />
+                        <label class='radiolabel'><input type="radio" name="selectedcake" value="Round10"
+                                onclick="calculateTotal()" />원형 케이크 10인치 - 16인 분($35)</label><br />
+                        <label class='radiolabel'><input type="radio" name="selectedcake" value="Round12"
+                                onclick="calculateTotal()" />원형 케이크 12인치 - 30인 분($75)</label><br />
+                        <br />
+                        <label>필링 선택</label>
+                        <select id="filling" name='filling' onchange="calculateTotal()">
+                            <option value="None">선택해주세요</option>
+                            <option value="Lemon">레몬($5)</option>
+                            <option value="Custard">카스타드($5)</option>
+                            <option value="Fudge">퍼지($7)</option>
+                            <option value="Mocha">모카($8)</option>
+                            <option value="Raspberry">라즈베리($10)</option>
+                            <option value="Pineapple">파인애플($5)</option>
+                            <option value="Dobash">도바시($9)</option>
+                            <option value="Mint">민트($5)</option>
+                            <option value="Cherry">체리($5)</option>
+                            <option value="Apricot">살구($8)</option>
+                            <option value="Buttercream">버터크림($7)</option>
+                            <option value="Chocolate Mousse">초콜릿 무스($12)</option>
+                        </select>
+                        <br />
+                        <p>
+                            <label for='includecandles' class="inlinelabel">케이크 초 추가($5)</label>
+                            <input type="checkbox" id="includecandles" name='includecandles'
+                                onclick="calculateTotal()" />
+                        </p>
+                        <p>
+                            <label class="inlinelabel" for='includeinscription'>케이크에 문장 추가($20)</label>
+                            <input type="checkbox" id="includeinscription" name="includeinscription"
+                                onclick="calculateTotal()" />
+                                <br>
+                            <input type="text" id="theinscription" name="theinscription" placeholder="케이크에 적을 문장을 입력하기" />
+                        </p>
+                        <div id="totalPrice"></div>
+                    </fieldset>
+                </div>
+                <div class="cont_details">
+                    <fieldset>
+                        <legend>주문자 정보</legend>
+                        <label for='name'>이름</label>
+                        <input type="text" id="name" name='name' />
+                        <br />
+                        <label for='address'>주소</label>
+                        <input type="text" id="address" name='address' />
+                        <br />
+                        <label for='phonenumber'>연락처</label>
+                        <input type="text" id="phonenumber" name='phonenumber' />
+                        <br />
+                    </fieldset>
+                </div>
+                <input type='submit' id='submit' value='주문하기' onclick="calculateTotal()" />
+            </div>
+        </form>
+    </div>
+    <!--End of wrap-->
+
+</body>
+
+</html>
